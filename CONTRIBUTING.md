@@ -34,18 +34,18 @@ Summary: Fixed a bug that caused relationships to be added twice
 
 Release notes: <none>
 
-Releases: @keystone-alpha/core@minor, @keystone-alpha/adapter-mongoose@patch
+Releases: @keystone-alpha/keystone@minor, @keystone-alpha/adapter-mongoose@patch
 
 Dependents: @keystone-alpha/cypress-project-access-control@patch, @keystone-alpha/cypress-project-basic@patch, @keystone-alpha/cypress-project-login@patch, @keystone-alpha/cypress-project-twitter-login@patch
 
 ---
-{"summary":"Fixed a bug that caused relationships to be added twice","releases":[{"name":"@keystone-alpha/core","type":"minor"},{"name":"@keystone-alpha/adapter-mongoose","type":"patch"}],"dependents":[{"name":"@keystone-alpha/cypress-project-access-control","type":"patch","dependencies":["@keystone-alpha/core","@keystone-alpha/adapter-mongoose"]},{"name":"@keystone-alpha/cypress-project-basic","type":"patch","dependencies":["@keystone-alpha/core","@keystone-alpha/adapter-mongoose"]},{"name":"@keystone-alpha/cypress-project-login","type":"patch","dependencies":["@keystone-alpha/core","@keystone-alpha/adapter-mongoose"]},{"name":"@keystone-alpha/cypress-project-twitter-login","type":"patch","dependencies":["@keystone-alpha/core","@keystone-alpha/adapter-mongoose"]}]}
+{"summary":"Fixed a bug that caused relationships to be added twice","releases":[{"name":"@keystone-alpha/keystone","type":"minor"},{"name":"@keystone-alpha/adapter-mongoose","type":"patch"}],"dependents":[{"name":"@keystone-alpha/cypress-project-access-control","type":"patch","dependencies":["@keystone-alpha/keystone","@keystone-alpha/adapter-mongoose"]},{"name":"@keystone-alpha/cypress-project-basic","type":"patch","dependencies":["@keystone-alpha/keystone","@keystone-alpha/adapter-mongoose"]},{"name":"@keystone-alpha/cypress-project-login","type":"patch","dependencies":["@keystone-alpha/keystone","@keystone-alpha/adapter-mongoose"]},{"name":"@keystone-alpha/cypress-project-twitter-login","type":"patch","dependencies":["@keystone-alpha/keystone","@keystone-alpha/adapter-mongoose"]}]}
 ---
 ```
 
 This generated changeset stores information about a desired version bump in a commit message.
 
-An example, if you generate a changeset that includes `adapter-mongoose` as a patch, and `core` as a minor, you can merge your PR, and the next time the `version-packages` command is run, these will both be updated.
+An example, if you generate a changeset that includes `adapter-mongoose` as a patch, and `keystone` as a minor, you can merge your PR, and the next time the `version-packages` command is run, these will both be updated.
 
 You can have multiple changesets in a single PR. This will give you more granular changelogs, and is encouraged.
 
@@ -71,7 +71,7 @@ To demonstrate, imagine you have the following two changesets:
 ...
 Summary: Fixed a bug that caused relationships to be added twice
 
-Releases: @keystone-alpha/core@minor, @keystone-alpha/adapter-mongoose@patch
+Releases: @keystone-alpha/keystone@minor, @keystone-alpha/adapter-mongoose@patch
 ...
 ```
 
@@ -81,17 +81,17 @@ and the second changest:
 ...
 Summary: Converted functions to arrow functions for some reason
 
-Releases: @keystone-alpha/core@patch
+Releases: @keystone-alpha/keystone@patch
 ...
 ```
 
-with `core` currently at `0.1.1`, and `adapter-mongoose` at `0.1.3`.
+with `keystone` currently at `0.1.1`, and `adapter-mongoose` at `0.1.3`.
 
 The `version-packages` command will make a commit with the following changes:
 
-- The version in `core`'s `package.json` will be updated to `0.2.0`
+- The version in `keystone`'s `package.json` will be updated to `0.2.0`
 - The version in `adapter-mongoose`'s `package.json` will be updated to `0.1.4`
-- The `CHANGELOG.md` of core will be updated to have the following at the top of the file:
+- The `CHANGELOG.md` of keystone will be updated to have the following at the top of the file:
 
 ```
 ## 0.2.0
